@@ -8,7 +8,7 @@ from .models import User, Team, Activity, Leaderboard, Workout
 def api_root(request, format=None):
     if request.method == 'POST':
         return Response({"message": "POST request received"}, status=status.HTTP_201_CREATED)
-    base_url = request.build_absolute_uri('/')
+    base_url = 'https://fantastic-couscous-wr77wgpqw7rg3v49p-8000.app.github.dev/'
     return Response({
         'users': base_url + 'api/users/?format=api',
         'teams': base_url + 'api/teams/?format=api',
